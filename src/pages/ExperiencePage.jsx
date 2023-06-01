@@ -14,9 +14,9 @@ function ExperiencePage() {
      
 
       {/* Buttons */}
-      <button className="text-[#193001] font-light font-display text-[182px] z-10 absolute bottom-[40px] hover:text-[#F1F7EB] hover:bg-[#7F3549]">
+      <Link className="text-[#193001] font-light font-display text-[182px] z-10 absolute bottom-[40px] hover:text-[#F1F7EB] hover:bg-[#7F3549]" to="/skills/languages">
       Languages
-      </button>
+      </Link>
 
       <button className="text-[#193001] font-light font-display text-[182px] z-10 absolute right-0 top-[200px] hover:text-[#F1F7EB] hover:bg-[#7F3549]">
       Tools

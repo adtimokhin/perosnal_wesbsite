@@ -18,6 +18,8 @@ import ProjectsPage from "./pages/ProjectsPage";
 import ExperiencePage from "./pages/ExperiencePage";
 import Contacts from "./pages/Contacts";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AboutPage from "./pages/AboutPage";
+import LanguagesPage from "./pages/Skills/LanguagesPage";
 
 function App() {
   const [menuWindow, setMenuWindow] = useState({
@@ -31,7 +33,9 @@ function App() {
             <Route index element={<NavPage />} />
             <Route path="projects" element={<ProjectsPage />} />
             <Route path="skills" element={<ExperiencePage />} />
+            <Route path="skills/languages" element={<LanguagesPage />} />
             <Route path="contacts" element={<Contacts />} />
+            <Route path="about" element={<AboutPage />} />
         </Routes>
       </BrowserRouter>
   );
