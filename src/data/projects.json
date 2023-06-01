@@ -4,9 +4,8 @@
       "id": "AYO",
       "displayName": "AYO",
       "leftOffset": 20,
-      "cursorImage": "https://adtimokhin.github.io/family_photos_json_server/images/jacob/jacob3.jpg",
       "imageXOffset": 150,
-      "imageYOffset": -30,
+      "imageYOffset": -100,
       "hoverMainColor": "#030415",
       "hoverAccentColor": "#F5AEAE",
       "hoverTextColor": "#DADEED"
@@ -15,23 +14,21 @@
       "id": "SSS",
       "displayName": "SomeSpringStuff",
       "leftOffset": 60,
-      "cursorImage": "https://adtimokhin.github.io/family_photos_json_server/images/jacob/jacob5.jpg",
-      "imageXOffset": -50,
-      "imageYOffset": 20,
-      "hoverMainColor": "#030415",
-      "hoverAccentColor": "#F5AEAE",
-      "hoverTextColor": "#DADEED"
+      "imageXOffset": -100,
+      "imageYOffset": -70,
+      "hoverMainColor": "#D6D8D9",
+      "hoverAccentColor": "#213C96",
+      "hoverTextColor": "#4B4B4D"
     },
     {
       "id": "WDS",
       "displayName": "WDS",
       "leftOffset": 39,
-      "cursorImage": "https://adtimokhin.github.io/family_photos_json_server/images/jacob/jacob14.jpg",
-      "imageXOffset": 0,
+      "imageXOffset": -140,
       "imageYOffset": 100,
-      "hoverMainColor": "#030415",
-      "hoverAccentColor": "#F5AEAE",
-      "hoverTextColor": "#DADEED"
+      "hoverMainColor": "#A2A69E",
+      "hoverAccentColor": "#F2F2F2",
+      "hoverTextColor": "#4B4B4D"
     }
   ]
 }

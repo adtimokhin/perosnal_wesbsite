@@ -8,12 +8,20 @@ function ProjectsPage() {
     mainColor: "none",
     textColor: "none",
   });
+  // FIXME: I cannot find a way how to chnage the color of the nav buttons on hover.
   return (
-    <MyContext.Provider value={"DOG"}>
-      <div className="w-screen h-screen bg-[#9DCC6A] relative">
+    <MyContext.Provider value={{ theme: theme, setTheme: setTheme }}>
+      <div
+        className="w-screen h-screen relative"
+        style={{
+          backgroundColor: `${
+            theme.mainColor == "none" ? "#9DCC6A" : theme.mainColor
+          }`,
+        }}
+      >
         {/* Back button */}
         <button
-          className=" text-[64px] font-display font-extralight absolute top-0 right-0 hover:text-[#3B462F]"
+          className="text-[64px] font-display font-extralight absolute top-0 right-0"
           style={{
             color: `${theme.textColor == "none" ? "#ECF4E4" : theme.textColor}`,
           }}
@@ -25,10 +33,12 @@ function ProjectsPage() {
         <Projects />
 
         {/* Other projects button */}
-        <button className="text-[64px] font-display font-extralight absolute bottom-0 right-0 hover:text-[#3B462F]"
-        style={{
+        <button
+          className="text-[64px] font-display font-extralight absolute bottom-0 right-0 hover:text-[#3B462F]"
+          style={{
             color: `${theme.textColor == "none" ? "#ECF4E4" : theme.textColor}`,
-          }}>
+          }}
+        >
           Other&#8594;
         </button>
       </div>
