@@ -13,6 +13,8 @@ import MyContext from "./utils/UseContext";
 import AboutMeShortPage from "./components/AboutMe/AboutMeShortPage/AboutMeShortPage";
 import Projects from "./components/Menu/MenuContent/Projects/Projects";
 import ToolsIUsePage from "./components/ToolsIUse/ToolsIUsePage/ToolsIUsePage";
+import NavPage from "./pages/NavPage";
+import ProjectsPage from "./pages/ProjectsPage";
 
 function App() {
   const [menuWindow, setMenuWindow] = useState({
@@ -22,38 +24,10 @@ function App() {
   });
   return (
     <>
-      {/* <MenuWindow /> */}
       <main className="w-screen bg-main-800 flex flex-col justify-center items-center min-h-screen">
-        <MyContext.Provider value={setMenuWindow}>
-          {/* ADTIMOKHIN TOP TEXT */}
-          <AnimatePresence>
-            {menuWindow.show && (
-              <MenuWindow
-                contex={menuWindow.context}
-                menuBackgroundColor={menuWindow.menuBackgroundColor}
-              />
-            )}
-          </AnimatePresence>
-
-          {/* <Start/> */}
-
-          <Parallax />
-
-          <Projects />
-          <ToolsIUsePage/>
-
-          <AboutMeShortPage />
-
-          <Navigation />
-          <SeparationCubes />
-          <ContactForm />
-          <SeparationCubes />
-
-          <ColorScheme />
-        </MyContext.Provider>
+        {/* <NavPage /> */}
+        <ProjectsPage />
       </main>
-
-      <Footer />
     </>
   );
 }

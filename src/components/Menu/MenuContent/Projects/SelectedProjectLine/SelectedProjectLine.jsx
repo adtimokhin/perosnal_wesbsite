@@ -30,7 +30,7 @@ function SelectedProjectLine({ data }) {
   const textVariants = {
     hidden: { y: 100 },
     show: {
-      y: 25,
+      y: 23,
       transition: {
         ease: "easeOut",
         duration: 0.5,
@@ -49,7 +49,7 @@ function SelectedProjectLine({ data }) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleMouseLeave}
-      className="border-b-[4px] w-0 h-fit border-black text-[50px] font-body font-bold flex overflow-y-hidden overflow-x-visible p-4 hover:cursor-pointer"
+      className="border-b-[4px] w-0 h-fit border-[#ECF4E4] text-[48px] font-body font-black flex overflow-y-hidden overflow-x-visible p-4 hover:cursor-pointer"
     >
       <motion.p
         initial="hidden"
