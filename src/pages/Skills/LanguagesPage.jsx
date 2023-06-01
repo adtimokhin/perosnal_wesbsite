@@ -7,11 +7,15 @@ function LanguagesPage() {
     <div className="w-screen h-screen bg-[#9DCC6A]">
       {/* Back banner */}
       <Link to="/skills">
-        <BackBanner />
+        <BackBanner leftToRight={true} />
       </Link>
 
       {/* Lines with text */}
-      <div className="w-full h-full overflow-hidden justify-between">
+      <div
+        className="w-full overflow-hidden justify-between"
+        style={{ height: `${window.innerHeight - 2 * 63}px` }}
+        // 63 - height of the banner
+      >
         {/* FIXME: Change the h-full to the real value later */}
         <LetterLine letters={"YXGFTUXJAVAKYVCKQCLHDMZMPGLFEV"} />
         <LetterLine letters={"AABKHQCSWIULMNCRSUVWCOSBGBZOQL"} />
@@ -26,6 +30,10 @@ function LanguagesPage() {
         <LetterLine letters={"CUMOWUHBRHGGRPSWIFTTISXSTWFUKBQ"} />
         <LetterLine letters={"XBSHTMLBPBJVEPJTKDRSPPGLCSSRVQAZ"} />
       </div>
+
+      <Link to="/skills">
+        <BackBanner leftToRight={false} />
+      </Link>
 
       {/* <LetterLine letters={"UPBLSSQUQRJLVSVEFPLJAWGACSSFDOUURL"} /> */}
       {/* <LetterLine letters={"FAEYRYZFTYWVCCBJGLIXYRTUYQKFFPBMJT"} /> */}

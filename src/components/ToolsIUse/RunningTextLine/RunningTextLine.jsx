@@ -34,7 +34,7 @@ function RunningTextLine({ data }) {
       },
     },
   };
-
+  
   return (
     <div className="w-full h-1/3 relative text-[7vh] font-body font-semibold overflow-hidden">
       {!isAnimating && (
