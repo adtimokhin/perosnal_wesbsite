@@ -1,0 +1,25 @@
+.icon-bg {
+  fill: #f5b45f;
+  overflow:visible;
+  transition: all 0.4s ease-in;
+}
+
+.icon-bg.active {
+  fill: #ffebd1;
+  overflow:visible;
+  /* transform: translateY(-10%) translateX(-2%); */
+  transition: all 0.4s ease-in;
+}
+
+.icon {
+  fill: #bb6b00;
+  overflow:visible;
+  transition: all 0.4s ease-in;
+}
+
+.icon.active {
+  fill: #4c2b00;
+  overflow:visible;
+  /* transform: translateY(-10%) translateX(-2%); */
+  transition: all 0.4s ease-in;
+}

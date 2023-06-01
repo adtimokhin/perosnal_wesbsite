@@ -1,0 +1,19 @@
+{
+  "lines": [
+    {
+      "id":"Lags",
+      "buttonText": "Languages",
+      "content": ["SQL", "JAVA", "JS", "PYTHON", "R", "C", "SQL", "JAVA", "JS", "PYTHON"]
+    },
+    {
+      "id":"Libs",
+      "buttonText": "Libraries",
+      "content": ["Spring", "React", "Node", "Hibernate", "TailwindCSS", "Express", ""]
+    },
+    {
+      "id":"Lags",
+      "buttonText": "Other Tools",
+      "content": ["Firebase", "MongoDB", "Postgres", "Figma", "Blender", ""]
+    }
+  ]
+}

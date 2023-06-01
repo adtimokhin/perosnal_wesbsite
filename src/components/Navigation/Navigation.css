@@ -1,0 +1,5 @@
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 10; /* optional, but may be needed if other elements overlap the navbar */
+  }
