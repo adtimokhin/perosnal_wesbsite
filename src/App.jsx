@@ -15,6 +15,7 @@ import Projects from "./components/Menu/MenuContent/Projects/Projects";
 import ToolsIUsePage from "./components/ToolsIUse/ToolsIUsePage/ToolsIUsePage";
 import NavPage from "./pages/NavPage";
 import ProjectsPage from "./pages/ProjectsPage";
+import ExperiencePage from "./pages/ExperiencePage";
 
 function App() {
   const [menuWindow, setMenuWindow] = useState({
@@ -26,7 +27,8 @@ function App() {
     <>
       <main className="w-screen bg-main-800 flex flex-col justify-center items-center min-h-screen">
         {/* <NavPage /> */}
-        <ProjectsPage />
+        {/* <ProjectsPage /> */}
+        <ExperiencePage />
       </main>
     </>
   );
