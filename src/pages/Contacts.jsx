@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import ContactButtons from "../components/ContactButtons/ContactButtons";
 
 function Contacts() {
   return (
     <div className="h-screen w-screen bg-[#F1F7EB] relative">
       {/* Back button */}
-      <button className="text-[64px] font-display font-extralight absolute top-0 right-0 text-[#F1F7EB] hover:text-[#3B462F] z-10">
+      <Link className="text-[64px] font-display font-extralight absolute top-0 right-0 text-[#F1F7EB] hover:text-[#3B462F] z-10" to="/">
         &#8592;Back
-      </button>
+      </Link>
 
       {/* Cool rectangles */}
       <div className="bg-[#193001] w-[54%] absolute h-[60%] bottom-0" />

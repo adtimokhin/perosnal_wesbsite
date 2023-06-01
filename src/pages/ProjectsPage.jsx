@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Projects from "../components/Menu/MenuContent/Projects/Projects";
 import MyContext from "../utils/UseContext";
+import { Link } from "react-router-dom";
 
 function ProjectsPage() {
   const [theme, setTheme] = useState({
@@ -20,14 +21,15 @@ function ProjectsPage() {
         }}
       >
         {/* Back button */}
-        <button
+        <Link
           className="text-[64px] font-display font-extralight absolute top-0 right-0"
           style={{
             color: `${theme.textColor == "none" ? "#ECF4E4" : theme.textColor}`,
           }}
+          to="/"
         >
           &#8592;Back
-        </button>
+        </Link>
 
         {/* Selected Projects display */}
         <Projects />

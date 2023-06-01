@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 function ExperiencePage() {
   return (
     <div className="w-screen h-screen bg-[#F1F7EB] relative">
       {/* Back button */}
-      <button className="text-[64px] font-display font-extralight absolute top-0 right-0 text-[#193001] hover:text-[#6DD200]">
+      <Link className="text-[64px] font-display font-extralight absolute top-0 right-0 text-[#193001] hover:text-[#6DD200]" to="/">
         &#8592;Back
-      </button>
+      </Link>
 
       {/* Cool rectangles */}
       <div className="bg-[#77A842] absolute w-full h-[244px] left-0 top-[346px]"/>

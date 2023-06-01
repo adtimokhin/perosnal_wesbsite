@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function NavPage() {
   const cursorRadius = 200;
@@ -29,39 +30,39 @@ function NavPage() {
         className="w-[551px] h-[17px] bg-[#E4E8DE] absolute top-1/2 left-1/2"
         style={{ borderRadius: "11px", transform: "translate(-50%, -50%)" }}
       />
-
       <div
         id="verical_line__sep"
         className="w-[17px] h-[312px] bg-[#E4E8DE] absolute top-1/2 left-1/2"
         style={{ borderRadius: "11px", transform: "translate(-50%, -50%)" }}
       />
-
       {/* container for the text-buttons */}
       <div className="w-full h-full flex">
         {/* Left half of the screen */}
         <div className="w-1/2 h-full pr-[20px]">
           {/* Top half of the div */}
           <div className="w-full h-1/2 pb-[20px] relative">
-            <button
+            <Link
               id="projects__button"
               className="font-display text-[96px] font-semibold text-[#193001] absolute right-0 bottom-0 z-20 hover:text-[#7F3549] hover:cursor-none"
               onMouseEnter={addHoverOnButton}
               onMouseLeave={removeHoverOnButton}
+              to="/projects"
             >
               PROJECTS
-            </button>
+            </Link>
           </div>
 
           {/* Bottom half of the div */}
           <div className="w-full h-1/2 pt-[20px] relative">
-            <button
+            <Link
               id="about__button"
               className="font-display text-[96px] font-semibold text-[#193001] absolute right-0 top-0 z-20 hover:text-[#7F3549] hover:cursor-none"
               onMouseEnter={addHoverOnButton}
               onMouseLeave={removeHoverOnButton}
+              to="/about"
             >
               ABOUT ME
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -69,30 +70,31 @@ function NavPage() {
         <div className="w-1/2 h-full pl-[20px]">
           {/* Top half of the div */}
           <div className="w-full h-1/2 pb-[20px] relative">
-            <button
+            <Link
               id="experience__button"
               className="font-display text-[96px] font-semibold text-[#193001] absolute left-0 bottom-0 z-20 hover:text-[#7F3549] hover:cursor-none"
               onMouseEnter={addHoverOnButton}
               onMouseLeave={removeHoverOnButton}
+              to="/skills"
             >
               MY SKILLS
-            </button>
+            </Link>
           </div>
 
           {/* Bottom half of the div */}
           <div className="w-full h-1/2 pt-[20px] relative">
-            <button
+            <Link
               id="contacts__button"
               className="font-display text-[96px] font-semibold text-[#193001] absolute left-0 top-0 z-20 hover:text-[#7F3549] hover:cursor-none"
               onMouseEnter={addHoverOnButton}
               onMouseLeave={removeHoverOnButton}
+              to="/contacts"
             >
               CONTACTS
-            </button>
+            </Link>
           </div>
         </div>
       </div>
-
       {/* Custom cursor */}
       {!buttonHovered && (
         <div

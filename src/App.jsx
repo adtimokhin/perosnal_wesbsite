@@ -17,6 +17,7 @@ import NavPage from "./pages/NavPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ExperiencePage from "./pages/ExperiencePage";
 import Contacts from "./pages/Contacts";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [menuWindow, setMenuWindow] = useState({
@@ -25,14 +26,14 @@ function App() {
     menuBackgroundColor: "transparent",
   });
   return (
-    <>
-      <main className="w-screen bg-main-800 flex flex-col justify-center items-center min-h-screen">
-        {/* <NavPage /> */}
-        {/* <ProjectsPage /> */}
-        {/* <ExperiencePage /> */}
-        <Contacts />
-      </main>
-    </>
+      <BrowserRouter>
+        <Routes>
+            <Route index element={<NavPage />} />
+            <Route path="projects" element={<ProjectsPage />} />
+            <Route path="skills" element={<ExperiencePage />} />
+            <Route path="contacts" element={<Contacts />} />
+        </Routes>
+      </BrowserRouter>
   );
 }
 
