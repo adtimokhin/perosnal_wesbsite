@@ -1,24 +1,24 @@
 .icon-bg {
-  fill: #f5b45f;
+  fill: #F1F7EB;
   overflow:visible;
   transition: all 0.4s ease-in;
 }
 
 .icon-bg.active {
-  fill: #ffebd1;
+  fill: #F1F7EB;
   overflow:visible;
   /* transform: translateY(-10%) translateX(-2%); */
   transition: all 0.4s ease-in;
 }
 
 .icon {
-  fill: #bb6b00;
+  fill: #77A842;
   overflow:visible;
   transition: all 0.4s ease-in;
 }
 
 .icon.active {
-  fill: #4c2b00;
+  fill: #7F3549;
   overflow:visible;
   /* transform: translateY(-10%) translateX(-2%); */
   transition: all 0.4s ease-in;
