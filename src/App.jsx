@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
 import LanguagesPage from "./pages/Skills/LanguagesPage";
 import ToolsPage from "./pages/Skills/ToolsPages";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const [menuWindow, setMenuWindow] = useState({
@@ -15,18 +16,20 @@ function App() {
     menuBackgroundColor: "transparent",
   });
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<NavPage />} />
-        <Route path="projects" element={<ProjectsPage />} />
-        <Route path="skills" element={<ExperiencePage />} />
-        <Route path="skills/languages" element={<LanguagesPage />} />
-        <Route path="skills/tools" element={<ToolsPage />} />
+    <AnimatePresence mode='wait'>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<NavPage />} />
+          <Route path="projects" element={<ProjectsPage />} />
+          <Route path="skills" element={<ExperiencePage />} />
+          <Route path="skills/languages" element={<LanguagesPage />} />
+          <Route path="skills/tools" element={<ToolsPage />} />
 
-        <Route path="contacts" element={<Contacts />} />
-        <Route path="about" element={<AboutPage />} />
-      </Routes>
-    </BrowserRouter>
+          <Route path="contacts" element={<Contacts />} />
+          <Route path="about" element={<AboutPage />} />
+        </Routes>
+      </BrowserRouter>
+    </AnimatePresence>
   );
 }
 
