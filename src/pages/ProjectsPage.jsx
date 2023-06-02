@@ -11,11 +11,12 @@ function ProjectsPage() {
     textColor: "none",
   });
   // FIXME: I cannot find a way how to chnage the color of the nav buttons on hover.
+  // FIXME: Do not play animation if not from the nav page
   return (
     <MyContext.Provider value={{ theme: theme, setTheme: setTheme }}>
       <div className="w-screen h-screen absolute top-0 left-0 bg-[#E4E8DE]">
         {/* The nav page */}
-        <div className="absolute w-full h-full top-0 left-0 z-0">
+        <div className="absolute w-full h-full top-0 left-0 z-0 bg-[#E4E8DE]">
           {/* The lines that separate the text */}
           <div
             id="horizontal_line__sep"

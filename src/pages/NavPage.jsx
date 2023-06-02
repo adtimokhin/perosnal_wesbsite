@@ -76,6 +76,7 @@ function NavPage() {
               onMouseEnter={addHoverOnButton}
               onMouseLeave={removeHoverOnButton}
               to="/skills"
+              state={{ from: "/" }}
             >
               MY SKILLS
             </Link>
