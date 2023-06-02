@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 function ExperiencePage() {
   // Amimation constants
   const firstRectDelay = 0;
-  const firstRectAnimation = 0.4;
+  const firstRectAnimation = 0.7;
 
-  const secondRectDelay = firstRectDelay + firstRectAnimation + 0.1;
-  const secondRectAnimation = 0.4;
+  const secondRectDelay = firstRectDelay + firstRectAnimation ;
+  const secondRectAnimation = 0.7;
 
   const textDelay = secondRectDelay + secondRectAnimation;
   const textAnimation = 0.5;
@@ -100,7 +100,7 @@ function ExperiencePage() {
         initial={{ x: "-100%", y: "-50%" }}
         animate={{ x: "0" }}
         transition={{
-          ease: "easeOut",
+          ease: "anticipate",
           duration: firstRectAnimation,
           delay: firstRectDelay,
         }}
@@ -110,7 +110,7 @@ function ExperiencePage() {
         initial={{ y: "-100%" }}
         animate={{ y: "0" }}
         transition={{
-          ease: "easeOut",
+          ease: "anticipate",
           duration: secondRectAnimation,
           delay: secondRectDelay,
         }}
