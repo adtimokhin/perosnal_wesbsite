@@ -27,7 +27,7 @@ function Projects() {
       {/* Selected Projects Display */}
       <div id="selected_projects" className="w-full relative">
         <h3
-          className="text-[48px] font-display font-thin"
+          className="text-[48px] font-display font-thin hover:cursor-default"
           style={{
             color: `${
               themeWork.theme.textColor == "none"

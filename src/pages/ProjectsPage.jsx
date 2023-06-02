@@ -35,14 +35,14 @@ function ProjectsPage() {
         <Projects />
 
         {/* Other projects button */}
-        <button
+        {/* <button
           className="text-[64px] font-display font-extralight absolute bottom-0 right-0 hover:text-[#3B462F]"
           style={{
             color: `${theme.textColor == "none" ? "#ECF4E4" : theme.textColor}`,
           }}
         >
           Other&#8594;
-        </button>
+        </button> */}
       </div>
     </MyContext.Provider>
   );

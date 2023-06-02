@@ -15,7 +15,7 @@ function Contacts() {
       {/*  Contacts text */}
 
       <h2
-        className="text-[#F1F7EB] text-[96px] font-display font-bold absolute top-1/2 left-1/2"
+        className="text-[#F1F7EB] text-[96px] font-display font-bold absolute top-1/2 left-1/2 hover:cursor-default"
         style={{ transform: "translate(-50%, -50%)" }}
       >
         CONTACTS

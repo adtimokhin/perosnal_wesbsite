@@ -18,10 +18,7 @@ function BackBanner({ leftToRight }) {
     const banners = [];
     for (let i = 0; i < bannerCount; i++) {
       banners.push(
-        <span
-          className="text-black text-[40px] font-display font-bold w-[97px] h-[40px]"
-          key={`${i}_back_banner`}
-        >
+        <span className="w-[97px] h-[40px]" key={`${i}_back_banner`}>
           Back
         </span>
       );
@@ -88,7 +85,7 @@ function BackBanner({ leftToRight }) {
   }, []);
 
   return (
-    <div className="w-full h-[63px] bg-[#F1F7EB] relative overflow-hidden">
+    <div className="w-full h-[63px] bg-[#F1F7EB] relative overflow-hidden text-black text-[40px] font-display font-bold hover:text-[#7F3549]">
       {banners}
     </div>
   );

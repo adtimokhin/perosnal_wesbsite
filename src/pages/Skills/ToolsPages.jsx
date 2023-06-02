@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import LetterLine from "../../components/LetterLine/LetterLine";
 import BackBanner from "../../components/BackBanner/BackBanner";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
-function LanguagesPage() {
+function ToolsPage() {
   const [lines, setLines] = useState([]);
   useEffect(() => {
-    import("../../data/languagesLines.json")
+    import("../../data/toolsLines.json")
       .then(({ lines }) => {
         // Set the lines data.
         setLines(lines);
@@ -16,6 +16,7 @@ function LanguagesPage() {
       });
   }, []);
 
+  // TODO: Chnage the letters in this page
   return (
     <div className="w-screen h-screen bg-[#9DCC6A]">
       {/* Back banner */}
@@ -29,8 +30,8 @@ function LanguagesPage() {
         style={{ height: `${window.innerHeight - 2 * 63}px` }}
         // 63 - height of the banner
       >
-        {lines.map(line =>(
-            <LetterLine letters={line.letters} focusLetters={line.focusLetters}/>
+        {lines.map((line) => (
+          <LetterLine letters={line.letters} focusLetters={line.focusLetters} />
         ))}
       </div>
 
@@ -44,4 +45,4 @@ function LanguagesPage() {
   );
 }
 
-export default LanguagesPage;
+export default ToolsPage;

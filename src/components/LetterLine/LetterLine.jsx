@@ -20,8 +20,9 @@ function shuffle(array) {
   return array;
 }
 
-function LetterLine({ letters }) {
+function LetterLine({ letters, focusLetters }) {
   // Letters come in as one string of characters
+  // focusLetters is an array of indexes in the letters that must be shown witth black
 
   //   FIXME: Shuffling animation does not work!
   const [shuffleData, setShuffleData] = useState({
@@ -67,50 +68,63 @@ function LetterLine({ letters }) {
   }, []);
 
   function getLetter(index) {
-    if (index == shuffleData.shuffleStart)
-      return (
-        <img
-          src={`/alphabet/LETTER ${
-            letters[shuffleData.shuffleStartArray[currentI]]
-          }.svg`}
-          draggable={false}
-        />
-      );
+    // if (index == shuffleData.shuffleStart)
+    //   return (
+    //     <img
+    //       src={`/alphabet/LETTER ${
+    //         letters[shuffleData.shuffleStartArray[currentI]]
+    //       }.svg`}
+    //       draggable={false}
+    //     />
+    //   );
 
-    if (index == shuffleData.shuffleEnd) {
+    // if (index == shuffleData.shuffleEnd) {
+    //   return (
+    //     <img
+    //       src={`/alphabet/LETTER ${
+    //         letters[shuffleData.shuffleEndArray[currentI]]
+    //       }.svg`}
+    //       draggable={false}
+    //     />
+    //   );
+    // }
+
+    // if (index == shuffleData.shuffleStartArray[currentI])
+    //   return (
+    //     <img
+    //       src={`/alphabet/LETTER ${letters[shuffleData.shuffleStart]}.svg`}
+    //       draggable={false}
+    //     />
+    //   );
+
+    // if (index == shuffleData.shuffleEndArray[currentI])
+    //   return (
+    //     <img
+    //       src={`/alphabet/LETTER ${letters[shuffleData.shuffleEnd]}.svg`}
+    //       draggable={false}
+    //     />
+    //   );
+
+    if (focusLetters.indexOf(index) != -1) {
+      // Filter instructions for the colors can be found here: https://codepen.io/sosuke/pen/Pjoqqp
       return (
         <img
-          src={`/alphabet/LETTER ${
-            letters[shuffleData.shuffleEndArray[currentI]]
-          }.svg`}
+          src={`/alphabet/LETTER ${letters[index]}.svg`}
           draggable={false}
+          style={{
+            filter:
+              "brightness(0) saturate(100%) invert(14%) sepia(9%) saturate(1484%) hue-rotate(46deg) brightness(97%) contrast(95%)invert(14%) sepia(9%) saturate(1484%) hue-rotate(46deg) brightness(97%) contrast(95%)",
+          }}
         />
       );
     }
-
-    if (index == shuffleData.shuffleStartArray[currentI])
-      return (
-        <img
-          src={`/alphabet/LETTER ${letters[shuffleData.shuffleStart]}.svg`}
-          draggable={false}
-        />
-      );
-
-    if (index == shuffleData.shuffleEndArray[currentI])
-      return (
-        <img
-          src={`/alphabet/LETTER ${letters[shuffleData.shuffleEnd]}.svg`}
-          draggable={false}
-        />
-      );
-
     return (
       <img src={`/alphabet/LETTER ${letters[index]}.svg`} draggable={false} />
     );
   }
 
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between h-[62px]">
       {letters.split("").map((letter, index) => getLetter(index))}
     </div>
   );

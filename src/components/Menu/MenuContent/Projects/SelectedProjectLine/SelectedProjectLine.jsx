@@ -29,6 +29,10 @@ function SelectedProjectLine({ data }) {
     setIsHovered(false);
   };
 
+  const handleClick = () => {
+    window.open(data.url, "_blank");
+  }
+
   const lineVarinats = {
     hidden: { width: "0%" },
     show: {
@@ -71,7 +75,7 @@ function SelectedProjectLine({ data }) {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      onClick={handleMouseLeave}
+      onClick={handleClick}
       className="border-b-[4px] w-0 h-fit text-[48px] font-body font-black flex overflow-y-hidden overflow-x-visible p-4 hover:cursor-pointer"
       style={{
         borderColor: `${

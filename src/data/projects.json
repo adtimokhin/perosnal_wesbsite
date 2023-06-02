@@ -8,7 +8,8 @@
       "imageYOffset": -100,
       "hoverMainColor": "#030415",
       "hoverAccentColor": "#F5AEAE",
-      "hoverTextColor": "#DADEED"
+      "hoverTextColor": "#DADEED",
+      "url": "https://adtimokhin.github.io/ayo-web/"
     },
     {
       "id": "SSS",
@@ -18,7 +19,8 @@
       "imageYOffset": -70,
       "hoverMainColor": "#D6D8D9",
       "hoverAccentColor": "#213C96",
-      "hoverTextColor": "#4B4B4D"
+      "hoverTextColor": "#4B4B4D",
+      "url": "https://adtimokhin.github.io/somespringstuff/public/html/entries/01.Introduciton.html"
     },
     {
       "id": "WDS",
@@ -28,7 +30,8 @@
       "imageYOffset": 100,
       "hoverMainColor": "#A2A69E",
       "hoverAccentColor": "#F2F2F2",
-      "hoverTextColor": "#4B4B4D"
+      "hoverTextColor": "#4B4B4D",
+      "url": "https://adtimokhin.github.io/somespringstuff/public/html/entries/01.Introduciton.html"
     }
   ]
 }

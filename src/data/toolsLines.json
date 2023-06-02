@@ -1,0 +1,50 @@
+{
+    "lines": [
+      {
+        "letters": "NRYQKEJKFMFXHMZTLVFPUBPIQKNSXMXZ",
+        "focusLetters": []
+      },
+      { "letters": "RYLEZQFIGMAWHJKLXZBTUNEREACTFLKH", "focusLetters": [6,7,8,9,10,23,24,25,26,27] },
+      
+
+      {
+        "letters": "AWGRUFUPIEFGRVBAXEKCGFTVBXEKIDKJ",
+        "focusLetters": []
+      },
+
+         
+
+      { "letters": "GLTCDXKPDJNNTMIQESPRINGITZQNBQJKV", "focusLetters": [17,18,19,20,21,22] },
+
+       
+      { "letters": "MHESABPQTEBIMYOYYHULPXIJHXOKRIJNY", "focusLetters": [] },
+
+      
+
+      {
+        "letters": "JELTAILWINDIPIJOBWKPEFIREBASEKRBIQC",
+        "focusLetters": [3,4,5,6,7,8,9,10,21,22,23,24,25,26,27,28]
+      },
+
+     
+      { "letters": "UQDMEUCSYODWNODEJLLSRPJPXTHKMUP", "focusLetters": [12,13,14,15] },
+
+      {
+        "letters": "CKYCVUPTAGAJXFYDCWYECPLFQECOMN",
+        "focusLetters": []
+      },
+      {
+        "letters": "EBRNMWJFHDHWBXZEFBQYDYPUPWEUTN",
+        "focusLetters": []
+      },
+      {
+        "letters": "SWAMONGODBYIHNOKSNZORANCDFCNGC",
+        "focusLetters": [3,4,5,6,7,8,9]
+      },
+      {
+        "letters": "WKJGIYCBEGZUOSDUTFJPOSTGRESIMALW",
+        "focusLetters": [19,20,21,22,23,24,25,26]
+      }
+    ]
+  }
+  
