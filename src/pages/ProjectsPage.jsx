@@ -81,8 +81,8 @@ function ProjectsPage() {
           initial={{ y: "-100%" }}
           animate={{ y: 0 }}
           transition={{
-            ease: "easeOut",
-            duration: 0.6,
+            ease: "anticipate",
+            duration: 0.8,
             delay: 0,
           }}
           className="w-screen h-screen absolute top-0 left-0 z-10"
