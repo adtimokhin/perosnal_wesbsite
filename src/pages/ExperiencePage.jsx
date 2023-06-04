@@ -107,7 +107,7 @@ function ExperiencePage() {
         }}
         className="text-[64px] font-display font-extralight absolute top-0 right-0 text-[#193001] hover:text-[#6DD200]"
       >
-        <Link to="/">&#8592;Back</Link>
+        <Link to="/nav">&#8592;Back</Link>
       </motion.div>
 
       {/* Cool rectangles */}

@@ -12,7 +12,7 @@ function Contacts() {
       {/* Back button */}
       <Link
         className="text-[64px] font-display font-extralight absolute top-0 right-0 text-[#F1F7EB] hover:text-[#3B462F] z-10"
-        to="/"
+        to="/nav"
       >
         &#8592;Back
       </Link>

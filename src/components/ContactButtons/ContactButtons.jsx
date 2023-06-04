@@ -39,7 +39,7 @@ function ContactButtons() {
         }
         iconBgID={"icon_bg_linkedIN"}
         iconID={"icon_LinkedIn"}
-        buttonUrl={"https://www.linkedin.com/in/aleksandr-timokhin-5300361b6/"}
+        buttonUrl={"https://www.linkedin.com/in/adtimokhin/"}
       />
 
       <SocialMediaButton

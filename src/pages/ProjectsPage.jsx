@@ -104,7 +104,7 @@ function ProjectsPage() {
                   theme.textColor == "none" ? "#ECF4E4" : theme.textColor
                 }`,
               }}
-              to="/"
+              to="/nav"
             >
               &#8592;Back
             </Link>

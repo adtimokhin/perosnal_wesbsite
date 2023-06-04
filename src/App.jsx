@@ -8,6 +8,7 @@ import AboutPage from "./pages/AboutPage";
 import LanguagesPage from "./pages/Skills/LanguagesPage";
 import ToolsPage from "./pages/Skills/ToolsPages";
 import { AnimatePresence } from "framer-motion";
+import HeroPage from "./pages/HeroPage";
 
 function App() {
   const [menuWindow, setMenuWindow] = useState({
@@ -19,7 +20,8 @@ function App() {
     <AnimatePresence mode='wait'>
       <BrowserRouter>
         <Routes>
-          <Route index element={<NavPage />} />
+          <Route index element={<HeroPage/>} />
+          <Route path="nav" element={<NavPage />} />
           <Route path="projects" element={<ProjectsPage />} />
           <Route path="skills" element={<ExperiencePage />} />
           <Route path="skills/languages" element={<LanguagesPage />} />
