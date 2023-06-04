@@ -43,7 +43,7 @@ function NavPage() {
           <div className="w-full h-1/2 pb-[20px] relative">
             <Link
               id="projects__button"
-              className="font-display text-[96px] font-semibold text-[#193001] absolute right-0 bottom-0 z-20 hover:text-[#7F3549] hover:cursor-none"
+              className="font-display text-[96px] font-semibold text-[#193001] absolute right-0 bottom-0 z-20 hover:text-[#7F3549] cursor-none"
               onMouseEnter={addHoverOnButton}
               onMouseLeave={removeHoverOnButton}
               to="/projects"
@@ -56,7 +56,7 @@ function NavPage() {
           <div className="w-full h-1/2 pt-[20px] relative">
             <Link
               id="about__button"
-              className="font-display text-[96px] font-semibold text-[#193001] absolute right-0 top-0 z-20 hover:text-[#7F3549] hover:cursor-none"
+              className="font-display text-[96px] font-semibold text-[#193001] absolute right-0 top-0 z-20 hover:text-[#7F3549] cursor-none"
               onMouseEnter={addHoverOnButton}
               onMouseLeave={removeHoverOnButton}
               to="/about"
@@ -72,7 +72,7 @@ function NavPage() {
           <div className="w-full h-1/2 pb-[20px] relative">
             <Link
               id="experience__button"
-              className="font-display text-[96px] font-semibold text-[#193001] absolute left-0 bottom-0 z-20 hover:text-[#7F3549] hover:cursor-none"
+              className="font-display text-[96px] font-semibold text-[#193001] absolute left-0 bottom-0 z-20 hover:text-[#7F3549] cursor-none"
               onMouseEnter={addHoverOnButton}
               onMouseLeave={removeHoverOnButton}
               to="/skills"
@@ -86,7 +86,7 @@ function NavPage() {
           <div className="w-full h-1/2 pt-[20px] relative">
             <Link
               id="contacts__button"
-              className="font-display text-[96px] font-semibold text-[#193001] absolute left-0 top-0 z-20 hover:text-[#7F3549] hover:cursor-none"
+              className="font-display text-[96px] font-semibold text-[#193001] absolute left-0 top-0 z-20 hover:text-[#7F3549] cursor-none"
               onMouseEnter={addHoverOnButton}
               onMouseLeave={removeHoverOnButton}
               to="/contacts"
