@@ -48,10 +48,11 @@ function HeroPage() {
         {/* Button that takes to the nav page */}
         <Link
           to="/nav"
+          state={{ from: "/" }}
           className="absolute w-[125px] h-[100px] -right-3 top-1/2 -rotate-90 text-center -translate-y-1/2"
         >
           <motion.div whileHover={{ scale: 1.09 }}>
-            <motion.p >Explore</motion.p>
+            <motion.p>Explore</motion.p>
             <p className="">&#8595;</p>
           </motion.div>
         </Link>
