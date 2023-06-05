@@ -17,8 +17,6 @@ function ExperiencePage() {
   const backButtonAnimation = 0.3;
 
   // Hooks
-
-  const controls = useAnimation();
   const location = useLocation();
   const [playAnimation, setPlayAnimation] = useState(true);
 
@@ -27,7 +25,7 @@ function ExperiencePage() {
     if (location.state?.from !== "/nav") {
       setPlayAnimation(false);
     }
-  }, [controls, location]);
+  }, [location]);
 
   // variants
   const backButtonVariants = {
