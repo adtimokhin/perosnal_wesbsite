@@ -20,19 +20,43 @@ function ExperiencePage() {
 
   const controls = useAnimation();
   const location = useLocation();
-  const [displayNavPage, setDisplayNavPage] = useState(false);
+  const [playAnimation, setPlayAnimation] = useState(true);
 
   useEffect(() => {
     // If the previous page was "/", show the nav page on the background
-    if (location.state?.from === "/") {
-      setDisplayNavPage(true);
+    if (location.state?.from !== "/nav") {
+      setPlayAnimation(false);
     }
   }, [controls, location]);
+
+  // variants
+  const backButtonVariants = {
+    animatedPosition: {
+      opacity: 0,
+    },
+    notAnimatedPosition: {
+      opacity: 1,
+    },
+    animation: {
+      opacity: 1,
+      transition: {
+        ease: "easeOut",
+        duration: backButtonAnimation,
+        delay: backButtonDelay,
+      },
+    },
+
+    noAnimation: {
+      opacity: 1,
+    },
+  };
+
+  // FIXME: I cannot find any solution to show the animation only if the user comes from a givr page, then to duplicate all of the code without the animations.
 
   return (
     <div className="w-screen h-screen bg-[#F1F7EB] relative">
       {/* Navigation Panel - for the animation */}
-      {displayNavPage && (
+      {playAnimation && (
         <div className="absolute w-full h-full top-0 left-0 z-0 select-none">
           {/* The lines that separate the text */}
           <div
@@ -97,67 +121,92 @@ function ExperiencePage() {
       )}
 
       {/* Back button */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          ease: "easeOut",
-          duration: backButtonAnimation,
-          delay: backButtonDelay,
-        }}
-        className="text-[64px] font-display font-extralight absolute top-0 right-0 text-[#193001] hover:text-[#6DD200] selection:bg-[#6DD200]"
-      >
-        <Link to="/nav">&#8592;Back</Link>
-      </motion.div>
+      {playAnimation ? (
+        <motion.div
+          initial={"animatedPosition"}
+          animate={"animation"}
+          variants={backButtonVariants}
+          className="text-[64px] font-display font-extralight absolute top-0 right-0 text-[#193001] hover:text-[#6DD200] selection:bg-[#6DD200]"
+        >
+          <Link to="/nav">&#8592;Back</Link>
+        </motion.div>
+      ) : (
+        <div className="text-[64px] font-display font-extralight absolute top-0 right-0 text-[#193001] hover:text-[#6DD200] selection:bg-[#6DD200]">
+          {" "}
+          <Link to="/nav">&#8592;Back</Link>
+        </div>
+      )}
 
       {/* Cool rectangles */}
-      <motion.div
-        initial={{ x: "-100%", y: "-50%" }}
-        animate={{ x: "0" }}
-        transition={{
-          ease: "anticipate",
-          duration: firstRectAnimation,
-          delay: firstRectDelay,
-        }}
-        className="bg-[#77A842] absolute w-full h-[312px] left-0 top-1/2"
-      />
-      <motion.div
-        initial={{ y: "-100%" }}
-        animate={{ y: "0" }}
-        transition={{
-          ease: "anticipate",
-          duration: secondRectAnimation,
-          delay: secondRectDelay,
-        }}
-        className="bg-[#6DD200] absolute h-full w-[538px] left-[152px]"
-      />
+      {playAnimation ? (
+        <motion.div
+          initial={{ x: "-100%", y: "-50%" }}
+          animate={{ x: "0" }}
+          transition={{
+            ease: "anticipate",
+            duration: firstRectAnimation,
+            delay: firstRectDelay,
+          }}
+          className="bg-[#77A842] absolute w-full h-[312px] left-0 top-1/2"
+        />
+      ) : (
+        <div className="bg-[#77A842] absolute w-full h-[312px] left-0 top-1/2"></div>
+      )}
+
+      {playAnimation ? (
+        <motion.div
+          initial={{ y: "-100%" }}
+          animate={{ y: "0" }}
+          transition={{
+            ease: "anticipate",
+            duration: secondRectAnimation,
+            delay: secondRectDelay,
+          }}
+          className="bg-[#6DD200] absolute h-full w-[538px] left-[152px]"
+        />
+      ) : (
+        <div className="bg-[#6DD200] absolute h-full w-[538px] left-[152px]"></div>
+      )}
 
       {/* Buttons */}
-      <motion.div
-        initial={{ x: "-100%", opacity: 0 }}
-        animate={{ x: "0", opacity: 1 }}
-        transition={{
-          ease: "easeOut",
-          duration: textAnimation,
-          delay: textDelay,
-        }}
-        className="text-[#193001] font-light font-display text-[182px] z-10 absolute bottom-[40px] hover:text-[#F1F7EB] hover:bg-[#7F3549] selection:text-[#7F3549]"
-      >
-        <Link to="/skills/languages">Languages</Link>
-      </motion.div>
 
-      <motion.div
-        initial={{ x: "100%", opacity: 0 }}
-        animate={{ x: "0%", opacity: 1 }}
-        transition={{
-          ease: "easeOut",
-          duration: textAnimation,
-          delay: textDelay,
-        }}
-        className="text-[#193001] font-light font-display text-[182px] z-10 absolute right-0 top-[100px] hover:text-[#F1F7EB] hover:bg-[#7F3549] selection:text-[#7F3549]"
-      >
-        <Link to="/skills/tools">Tools</Link>
-      </motion.div>
+      {playAnimation ? (
+        <motion.div
+          initial={{ x: "-100%", opacity: 0 }}
+          animate={{ x: "0", opacity: 1 }}
+          transition={{
+            ease: "easeOut",
+            duration: textAnimation,
+            delay: textDelay,
+          }}
+          className="text-[#193001] font-light font-display text-[182px] z-10 absolute bottom-[40px] hover:text-[#F1F7EB] hover:bg-[#7F3549] selection:text-[#7F3549]"
+        >
+          <Link to="/skills/languages">Languages</Link>
+        </motion.div>
+      ) : (
+        <div className="text-[#193001] font-light font-display text-[182px] z-10 absolute bottom-[40px] hover:text-[#F1F7EB] hover:bg-[#7F3549] selection:text-[#7F3549]">
+          <Link to="/skills/languages">Languages</Link>
+        </div>
+      )}
+
+      {playAnimation ? (
+        <motion.div
+          initial={{ x: "100%", opacity: 0 }}
+          animate={{ x: "0%", opacity: 1 }}
+          transition={{
+            ease: "easeOut",
+            duration: textAnimation,
+            delay: textDelay,
+          }}
+          className="text-[#193001] font-light font-display text-[182px] z-10 absolute right-0 top-[100px] hover:text-[#F1F7EB] hover:bg-[#7F3549] selection:text-[#7F3549]"
+        >
+          <Link to="/skills/tools">Tools</Link>
+        </motion.div>
+      ) : (
+        <div className="text-[#193001] font-light font-display text-[182px] z-10 absolute right-0 top-[100px] hover:text-[#F1F7EB] hover:bg-[#7F3549] selection:text-[#7F3549]">
+          <Link to="/skills/tools">Tools</Link>
+        </div>
+      )}
     </div>
   );
 }
