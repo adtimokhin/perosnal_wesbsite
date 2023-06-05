@@ -33,7 +33,7 @@ function ExperiencePage() {
     <div className="w-screen h-screen bg-[#F1F7EB] relative">
       {/* Navigation Panel - for the animation */}
       {displayNavPage && (
-        <div className="absolute w-full h-full top-0 left-0 z-0">
+        <div className="absolute w-full h-full top-0 left-0 z-0 select-none">
           {/* The lines that separate the text */}
           <div
             id="horizontal_line__sep"
@@ -105,7 +105,7 @@ function ExperiencePage() {
           duration: backButtonAnimation,
           delay: backButtonDelay,
         }}
-        className="text-[64px] font-display font-extralight absolute top-0 right-0 text-[#193001] hover:text-[#6DD200]"
+        className="text-[64px] font-display font-extralight absolute top-0 right-0 text-[#193001] hover:text-[#6DD200] selection:bg-[#6DD200]"
       >
         <Link to="/nav">&#8592;Back</Link>
       </motion.div>
@@ -141,7 +141,7 @@ function ExperiencePage() {
           duration: textAnimation,
           delay: textDelay,
         }}
-        className="text-[#193001] font-light font-display text-[182px] z-10 absolute bottom-[40px] hover:text-[#F1F7EB] hover:bg-[#7F3549]"
+        className="text-[#193001] font-light font-display text-[182px] z-10 absolute bottom-[40px] hover:text-[#F1F7EB] hover:bg-[#7F3549] selection:text-[#7F3549]"
       >
         <Link to="/skills/languages">Languages</Link>
       </motion.div>
@@ -154,7 +154,7 @@ function ExperiencePage() {
           duration: textAnimation,
           delay: textDelay,
         }}
-        className="text-[#193001] font-light font-display text-[182px] z-10 absolute right-0 top-[100px] hover:text-[#F1F7EB] hover:bg-[#7F3549]"
+        className="text-[#193001] font-light font-display text-[182px] z-10 absolute right-0 top-[100px] hover:text-[#F1F7EB] hover:bg-[#7F3549] selection:text-[#7F3549]"
       >
         <Link to="/skills/tools">Tools</Link>
       </motion.div>

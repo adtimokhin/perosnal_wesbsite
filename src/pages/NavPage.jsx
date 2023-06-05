@@ -23,7 +23,7 @@ function NavPage() {
   }, []);
 
   return (
-    <div className="w-screen h-screen bg-[#F1F7EB] relative cursor-none">
+    <div className="w-screen h-screen bg-[#F1F7EB] relative cursor-none select-none">
       {/* The lines that separate the text */}
       <div
         id="horizontal_line__sep"

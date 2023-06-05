@@ -14,9 +14,9 @@ function ProjectsPage() {
   // FIXME: Do not play animation if not from the nav page
   return (
     <MyContext.Provider value={{ theme: theme, setTheme: setTheme }}>
-      <div className="w-screen h-screen absolute top-0 left-0 bg-[#E4E8DE]">
+      <div className="w-screen h-screen absolute top-0 left-0 bg-[#E4E8DE] selection:text-[#7F3549]">
         {/* The nav page */}
-        <div className="absolute w-full h-full top-0 left-0 z-0 bg-[#E4E8DE]">
+        <div className="absolute w-full h-full top-0 left-0 z-0 bg-[#E4E8DE] select-none">
           {/* The lines that separate the text */}
           <div
             id="horizontal_line__sep"

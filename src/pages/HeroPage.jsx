@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function HeroPage() {
   return (
-    <div className="w-screen h-screen bg-[#F1F7EB] relative overflow-hidden">
+    <div className="w-screen h-screen bg-[#F1F7EB] relative overflow-hidden selection:text-[#7F3549]">
       {/* Block with ADTIMOKHIN on the screen */}
       <span className="text-[192px] font-display font-black text-[#132500] absolute top-1/2 -translate-y-1/3 z-50 cursor-default">
         <h1>AD</h1>
@@ -48,7 +48,7 @@ function HeroPage() {
         {/* Button that takes to the nav page */}
         <Link
           to="/nav"
-          className="absolute w-[125px] h-[100px] -right-3 top-1/2 -rotate-90 text-center"
+          className="absolute w-[125px] h-[100px] -right-3 top-1/2 -rotate-90 text-center -translate-y-1/2"
         >
           <motion.div whileHover={{ scale: 1.09 }}>
             <motion.p >Explore</motion.p>
